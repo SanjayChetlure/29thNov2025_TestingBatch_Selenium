@@ -4,14 +4,12 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-
 public class Ex7_isDisplayed2
 {
     public static void main(String[] args) throws InterruptedException {
 
         WebDriver driver=new ChromeDriver();
         driver.get("https://www.facebook.com");
-
 
         boolean result=false;
 
@@ -34,6 +32,5 @@ public class Ex7_isDisplayed2
         {
             System.out.println("element not present");
         }
-
     }
 }
