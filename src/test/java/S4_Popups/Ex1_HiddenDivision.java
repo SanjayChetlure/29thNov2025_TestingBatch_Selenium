@@ -1,0 +1,22 @@
+package S4_Popups;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Ex1_HiddenDivision
+{
+    public static void main(String[] args) throws InterruptedException {
+
+        WebDriver driver=new ChromeDriver();
+        driver.manage().window().maximize();
+        driver.get("https://www.mobikwik.com/");
+
+        Thread.sleep(2000);
+        //click on login btn
+        driver.findElement(By.xpath("(//span[text()='Login'])[1]")).click();
+        Thread.sleep(2000);
+
+        //enter mobile number
+        driver.findElement(By.xpath("//input[@id='email']")).sendKeys("9999999999");
+    }
+}
