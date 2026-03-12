@@ -1,4 +1,4 @@
-package S4_Popups;
+package S2_Popups;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

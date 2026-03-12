@@ -1,4 +1,4 @@
-package S3_Iframe;
+package S2_Iframe;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
