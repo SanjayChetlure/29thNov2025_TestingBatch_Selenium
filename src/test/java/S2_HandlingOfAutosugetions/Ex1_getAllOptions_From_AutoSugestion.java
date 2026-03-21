@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import java.util.List;
 
-public class Ex1_SelectMobileFromSugestion
+public class Ex1_getAllOptions_From_AutoSugestion
 {
     public static void main(String[] args) throws InterruptedException {
         WebDriver driver=new ChromeDriver();
@@ -13,11 +13,8 @@ public class Ex1_SelectMobileFromSugestion
         driver.get("https://www.google.com/");
         Thread.sleep(2000);
 
-        List<WebElement> allCheckboxes = driver.findElements(By.xpath("(//div[@class='form-group'])[4]//input"));
-
         driver.findElement(By.xpath("//textarea[@class='gLFyf']")).sendKeys("redmi");
         Thread.sleep(1000);
-        String expMobile = "redmi note 14";
 
         List<WebElement> allOptions = driver.findElements(By.xpath("(//ul[@class='G43f7e'])[1]/li//div[@class='wM6W7d']"));
 
@@ -26,6 +23,6 @@ public class Ex1_SelectMobileFromSugestion
             System.out.println(s1.getText());
         }
 
-        
+
     }
 }
