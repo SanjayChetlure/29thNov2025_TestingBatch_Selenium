@@ -27,6 +27,5 @@ public class Ex4_getSpecificDataByVerifying_TypeOfCell
             boolean data=cl.getBooleanCellValue();
             System.out.println(data);
         }
-
     }
 }
