@@ -12,6 +12,7 @@ public class SwagLabLoginPage
     @FindBy(xpath = "//input[@name='user-name']") private WebElement UN ;     //private WebElement UN=driver.findElement(By.xpath(""))
     @FindBy(xpath = "//input[@name='password']") private WebElement PWD;       //private WebElement PWD=driver.findElement(By.xpath(""))
     @FindBy(xpath = "//input[@name='login-button']") private WebElement loginBtn; //private WebElement loginBtn=driver.findElement(By.xpath(""))
+    @FindBy(xpath = "//h3[@data-test='error']") private WebElement errorMsg;
 
     //Step2: initialization
     public SwagLabLoginPage(WebDriver driver)
@@ -33,6 +34,12 @@ public class SwagLabLoginPage
     public void clickOnLoginBtn()
     {
         loginBtn.click();
+    }
+
+    public String getErrorMsg()
+    {
+        String errorMsgText = errorMsg.getText();
+        return errorMsgText;
     }
 
 }
